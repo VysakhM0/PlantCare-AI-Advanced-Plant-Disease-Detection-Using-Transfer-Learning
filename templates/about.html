@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}About - PlantCare AI{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="page-header center-text">
+        <h1 class="page-title">About Our Technology</h1>
+        <p class="page-subtitle">Transforming agriculture with state-of-the-art Artificial Intelligence.</p>
+    </div>
+
+    <div class="about-grid">
+        <div class="about-text glass-card">
+            <h2>Our Mission</h2>
+            <p>Plant diseases cause massive agricultural losses globally every year. Our mission is to democratize
+                access to expert-level agricultural knowledge through the power of AI.</p>
+            <p>By empowering farmers and hobbyists with instant plant diagnosis, we aim to reduce pesticide use, improve
+                crop yield, and promote sustainable farming practices across the world.</p>
+        </div>
+        <div class="about-image glass-card">
+            <!-- abstract visual -->
+            <div class="tech-graphic">
+                <div class="pulse-ring"></div>
+                <div class="center-node">🤖</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="how-it-works glass-card">
+        <h2 class="center-text section-title">How It Works</h2>
+        <div class="steps-container">
+            <div class="step hover-lift">
+                <div class="step-number">1</div>
+                <h3>Upload Image</h3>
+                <p>Take a clear picture of an infected plant leaf and upload it to our platform.</p>
+            </div>
+            <div class="step hover-lift">
+                <div class="step-number">2</div>
+                <h3>AI Analysis</h3>
+                <p>Our deep learning model analyzes pixel patterns to identify disease markers.</p>
+            </div>
+            <div class="step hover-lift">
+                <div class="step-number">3</div>
+                <h3>Get Results</h3>
+                <p>Receive an instant diagnosis along with confidence levels and actionable insights.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

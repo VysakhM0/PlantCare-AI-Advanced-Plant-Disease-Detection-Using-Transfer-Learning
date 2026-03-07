@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Diagnosis Result - PlantCare AI{% endblock %}
+
+{% block content %}
+<div class="page-container align-center">
+    <div class="result-card glass-card">
+        <div class="result-header">
+            <h2>Diagnosis Complete</h2>
+            <div class="success-badge">Analysis Successful</div>
+        </div>
+
+        <div class="result-body">
+            <div class="analyzed-image-container">
+                <img src="{{ url_for('static', filename=image_path) }}" alt="Analyzed Plant" class="analyzed-img">
+                <div class="scan-overlay"></div>
+            </div>
+
+            <div class="prediction-details">
+                <h3>Detected Condition:</h3>
+                <div class="prediction-tag">
+                    {{ prediction }}
+                </div>
+
+                <div class="action-items">
+                    <h4>Recommended Actions</h4>
+                    <p class="action-desc">Based on the AI prediction, our model suggests isolating the plant and
+                        applying the appropriate fungicidal or bacterial treatments if not healthy.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-actions">
+            <a href="/upload" class="btn-primary">Scan Another Plant</a>
+            <a href="/" class="btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
